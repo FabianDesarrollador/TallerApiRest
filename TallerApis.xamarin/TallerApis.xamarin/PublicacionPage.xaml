@@ -4,7 +4,8 @@
              x:Class="TallerApis.xamarin.PublicacionPage">
     <StackLayout Orientation="Vertical" Padding="20">
         <StackLayout>
-            <Label Text="">
+            
+            
         </StackLayout>
             
     </StackLayout>
