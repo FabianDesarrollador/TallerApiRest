@@ -20,17 +20,17 @@ namespace TallerApis.xamarin.View
             CargarPublications();
 		}
 
-        private void CargarPublications()
+        private async Task CargarPublications()
         {
             
             {
                 HttpClient client = new HttpClient();
 
             client.BaseAddress = new Uri("https://192.168.1.13");
-            var request = client.GetAsync("TallerApis/api/Publicacion").Result;
+            var request = await client.GetAsync("TallerApis/api/Publicacion");
             if (request.IsSuccessStatusCode)
             {
-                var responseJson = request.Content.ReadAsStringAsync().Result;
+                var responseJson = await request.Content.ReadAsStringAsync();
                 var response = JsonConvert.DeserializeObject<List<Publicacion>>(responseJson);
                     listpublicaciones.ItemsSource = response;
                
