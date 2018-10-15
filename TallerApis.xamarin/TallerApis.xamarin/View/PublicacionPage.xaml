@@ -5,6 +5,12 @@
              Title="Publicaciones">
     <StackLayout>
         <ListView x:Name="listpublicaciones">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ImageCell Text="{Binding Usuario}"
+                               Detail="{Binding Descripcion}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
             
         </ListView>
     </StackLayout>
