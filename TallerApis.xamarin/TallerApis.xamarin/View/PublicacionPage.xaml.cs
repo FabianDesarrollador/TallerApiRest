@@ -14,7 +14,13 @@ namespace TallerApis.xamarin.View
 	{
 		public PublicacionPage ()
 		{
-			InitializeComponent ();
+            InitializeComponent();
+            CargarPublications();
 		}
-	}
+
+        private void CargarPublications()
+        {
+            throw new NotImplementedException();
+        }
+    }
 }
