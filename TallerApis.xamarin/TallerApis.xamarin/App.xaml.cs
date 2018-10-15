@@ -1,6 +1,8 @@
 ﻿using System;
+using TallerApis.xamarin.View;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace TallerApis.xamarin
@@ -11,7 +13,7 @@ namespace TallerApis.xamarin
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new PublicacionPage());
         }
 
         protected override void OnStart()
